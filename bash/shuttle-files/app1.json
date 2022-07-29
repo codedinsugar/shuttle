@@ -1,0 +1,9 @@
+{
+    "name": "app1",
+    "links": [
+        {"name": "Official Docs", "value": "https://app1/docs"},
+        {"name": "Runbook", "value": "https://app1/runbook"},
+        {"name": "Dashboard", "value": "https://app1/dashboard"},
+        {"name": "Collaboration", "value": "https://app1/collab"}
+    ]
+}

@@ -1,0 +1,19 @@
+#!/bin/bash -e
+
+# [S]treamlined [H]elp [U]sing [T]his [T]utorial [L]ibrary [E]xperience
+# Get feature/product based links for Ops personas
+
+script_dir=${BASH_SOURCE%/*}/shuttle-files
+
+cd "$script_dir"
+
+if [[ $# -eq 0 ]]; then
+    echo "Missing argument.  These lookups are available:"
+    echo
+    basename -s .json -- *.json #get filename without .json extension
+elif [[ $1 && -e $1.json ]]; then
+    jq -r . "$1.json"
+else
+    echo "$1: not found, launch shuttle with no arguments to list available lookups." >&2
+    exit 1
+fi
